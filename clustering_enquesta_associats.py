@@ -17,10 +17,7 @@ file_name = 'respostes_enquesta_associats_postprocessades.csv'
 # Type of data 'N': numerical, 'C': categorical, 'CM': categorical with multiple options, 'NP': numeric with missing answers
 data_type =  ['N', 'C', 'N', 'CM', 'C', 'CN?', 'C','C', 'C', 'NP', 'C', 'CM', 'NP', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'C', 'NP', 'N', 'N', 'C', 'C']
 
-
 df = pd.read_csv(file_name, sep=',')
-df_ori = df.copy()  # Keep the original dataframe
-
 
 # Some fields are personal opinions and not suitable for clustering. Remove them.
 df.drop(['X1','X2','X3','ESCOLA'], axis='columns', inplace=True)
@@ -105,25 +102,12 @@ si_doctor_cat_list = [ii for ii, value in enumerate(si_doctor_cat) if value == 1
 no_doctor_data = df_nodoctor.to_numpy(copy=True)
 si_doctor_data = df_sidoctor.to_numpy(copy=True)
 
-
-#print (df_nodoctor)
-#print ('------------------------------------')
-#print (df_nodoctor.index.values)
-#print ('------------------------------------')
-#print (no_doctor_data)
-#print ('------------------------------------')
-
-ind_nodoctor = df_nodoctor.index.values
-ind_sidoctor = df_sidoctor.index.values
-
-
 no_doctor_clusters  = []
 no_doctor_centroids = []
 no_doctor_labels    = []
 no_doctor_cost      = []
 
 
-# https://www.researchgate.net/deref/http%3A%2F%2Fciteseerx.ist.psu.edu%2Fviewdoc%2Fdownload%3Fdoi%3D10.1.1.15.4028%26rep%3Drep1%26type%3Dpdf
 
 # Selecting the number of clusters can be tricky. In this case, we will try several 
 # values of K and check visually which one offers the best explanaibility for our case.
