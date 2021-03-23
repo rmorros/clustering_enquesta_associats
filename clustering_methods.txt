@@ -1,0 +1,15 @@
+
+kmodes:    Python implementations of the k-modes and k-prototypes clustering algorithms.
+           https://github.com/nicodv/kmodes
+
+hclustvar: A python package for hierarchical clustering of variables. Variables can be quantitative, qualitative or a mixture of both.
+           https://github.com/niwy/hclustvar (python)
+
+Feature importance in k-means clustering:
+           https://github.com/o1iv3r/FeatureImpCluster (R)
+
+Extensions to the k-Means Algorithm for Clustering Large Data Sets with Categorical Values
+http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.15.4028&rep=rep1&type=pdf
+
+UFLA: Clustering Data of Mixed Categorical and Numerical Type With Unsupervised Feature Learning (2015)
+           https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7244165
